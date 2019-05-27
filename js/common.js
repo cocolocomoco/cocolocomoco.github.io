@@ -37,13 +37,6 @@ var toggle = true;
 })();
 
 
-function projectInit(){
-	var offsetHeight = document.getElementById('first-project').clientHeight;
-
-	console.log(offsetHeight);
-	document.querySelector(".background").style.height = offsetHeight+'px';
-}
-projectInit();
 
 
 
@@ -65,7 +58,9 @@ function amountscrolled(){
 
 window.addEventListener("scroll", function(){
 	amountscrolled()
-}, false)
+}, false);
+
+
 
 
 
