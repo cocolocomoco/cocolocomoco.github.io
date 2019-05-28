@@ -62,13 +62,23 @@ function setRightPos(){
     rightInfo.style.opacity = 1;
 
 }
+function setaboutTopPadding(){
+    document.getElementById("about").style.paddingTop = document.getElementById("header").offsetHeight+'px';
+}
 
 setLeftPos();
 setRightPos();
+setaboutTopPadding();
+
+//set padding for about section as headerheight
+
+
+
 
 addEvent(window, "resize", function(event) {
     setLeftPos();
     setRightPos();
+    setaboutTopPadding();
 });
 
 
