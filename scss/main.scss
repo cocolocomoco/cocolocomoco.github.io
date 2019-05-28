@@ -157,9 +157,10 @@ h1{
 	font-family: Montserrat;
 }
 h2{
-	font-size: 4vw;
+	font-size: 2.2vw;
 	color: #fff;
 	line-height: 1.2;
+	font-family: Montserrat;
 }
 h3{
 	color: #fff;
@@ -586,5 +587,87 @@ main{
 	position: relative;
 	z-index: 1000;
 	background: #000;
+	.footer-container{
+		display: grid;
+		grid-template-columns: 26% 30% 38% 6%;
+		    border: 1px solid #fff;
+		> div{
+			border: 1px solid #fff;
+		}
+		.email-area{
+			display: flex;
+			align-items: center;
+		}
+		.email-inner{
+			padding: 2vw calc(5vw + 15px);
+		}
+		.menu-area, .social-area,.top-but-area{
+			display: grid;
+			grid-template-rows: 1fr 1fr;
+
+		}
+		.menu-footer{
+			display: flex;
+			align-items: center;
+			.menu-footer-inner{
+				margin: 0 auto;
+				a{
+					margin-right: 2vw;
+					&:last-child{
+						margin-right: 0px;
+					}
+				}
+			}
+		}
+		.social-area{
+			.social-wrap{
+				display: flex;
+				flex-wrap: wrap;
+				a{
+					width: 33.333%;
+					display: block;
+					border: 1px solid #fff;
+					border-top: none;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					transition: all .4s ease-in;
+					&:hover{
+						background-color: #fff;
+						color: #000;
+					}
+				}
+			}
+			.copyright{
+				border-top: 1px solid #fff;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				p{
+					margin: 0px;
+				}
+			}
+
+		}
+		.to-top-button{
+			img{
+				display: block;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		.lines-footer{
+			//background-color: #fff;
+			overflow: hidden;
+			img{
+				display: block;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+
+			}
+		}
+	}
 
 }
