@@ -1,5 +1,5 @@
 var canvas = document.getElementById('canvas'),
-    ctx = canvas.getContext('2d');
+ctx = canvas.getContext('2d');
 
 function resize() {
     canvas.width = window.innerWidth;
@@ -11,11 +11,11 @@ window.onresize = resize;
 function noise(ctx) {
 
     var w = ctx.canvas.width,
-        h = ctx.canvas.height,
-        idata = ctx.createImageData(w, h),
-        buffer32 = new Uint32Array(idata.data.buffer),
-        len = buffer32.length,
-        i = 0;
+    h = ctx.canvas.height,
+    idata = ctx.createImageData(w, h),
+    buffer32 = new Uint32Array(idata.data.buffer),
+    len = buffer32.length,
+    i = 0;
 
     for(; i < len;)
         buffer32[i++] = ((255 * Math.random())|0) << 24;
@@ -51,8 +51,13 @@ var addEvent = function(object, type, callback) {
 
 function setLeftPos(){
     var leftInfo = document.getElementById("left-hero-info");
-    leftInfo.style.left = 'calc(5vw - '+ leftInfo.offsetWidth/2+'px + ' + leftInfo.offsetHeight+'px'+')';
+    var infoWidth = leftInfo.offsetWidth/2;
+    var infoHeight = leftInfo.offsetHeight;
+    leftInfo.style.left = 'calc(5vw - '+ infoWidth+'px + ' +infoHeight+'px'+')';
+
     leftInfo.style.opacity = 1;
+
+
 
 }
 
@@ -66,9 +71,57 @@ function setaboutTopPadding(){
     document.getElementById("about").style.paddingTop = document.getElementById("header").offsetHeight+'px';
 }
 
+
+
+
+
+
+function solidHeader(){
+    var winheight= window.innerHeight || (document.documentElement || document.body).clientHeight
+    function amountscrolled(){
+
+        if(window.innerWidth > 640){
+           var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop
+           if (scrollTop > winheight) {
+               document.getElementById("header").className = 'solid';
+           }else{
+               document.getElementById("header").classList.remove('solid');
+           }
+       }else{
+         var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop
+
+         if (scrollTop > winheight/1.43) {
+             document.getElementById("mobile-header").className = 'solid';
+         }else{
+           document.getElementById("mobile-header").classList.remove('solid');
+
+       }
+
+   }
+}
+window.addEventListener("scroll", function(){
+    amountscrolled();
+}, false);
+}
+
+
+
+
+
+
+var menu = document.querySelector('.hamburger');
+var navMob = document.querySelector('#mobile-navigation');
+menu.onclick = function() {
+    menu.classList.toggle('is-active');
+    navMob.classList.toggle('show');
+    document.querySelector('body').classList.toggle('scroll-hide');
+};
+
+
 setLeftPos();
 setRightPos();
 setaboutTopPadding();
+solidHeader();
 
 //set padding for about section as headerheight
 
@@ -76,49 +129,13 @@ setaboutTopPadding();
 
 
 addEvent(window, "resize", function(event) {
-    setLeftPos();
-    setRightPos();
-    setaboutTopPadding();
+    document.getElementById("right-hero-content").style.opacity = 0;
+    document.getElementById("left-hero-info").style.opacity = 0;
+    setTimeout(function(){ //call when transitions end
+      setLeftPos();
+      setRightPos();
+      setaboutTopPadding();
+      solidHeader();
+  }, 500);
+    
 });
-
-
-
-
-var winheight= window.innerHeight || (document.documentElement || document.body).clientHeight
-
-
-function amountscrolled(){
-
-	var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop
-
-
-    if (scrollTop > winheight) {
-    	document.getElementById("header").className = 'solid';
-    }else{
-    	document.getElementById("header").classList.remove('solid');
-    }
-}
-
-window.addEventListener("scroll", function(){
-	amountscrolled()
-}, false);
-
-
-
-
-
-
-
-// window.onscroll = function() {myFunction()};
-
-
-
-
-// function myFunction() {
-// 	console.log(document.body.scrollTop)
-//   if (document.body.scrollTop > winHeight) {
-//     document.getElementById("header").className = 'solid';
-//   }else{
-//   	 document.getElementById("header").classList.remove('solid');
-//   }
-// }

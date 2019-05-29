@@ -21,7 +21,7 @@ body {
 	min-width: 320px;
 	position: relative;
 	line-height: 1.65;
-	font-family: $default-font;
+	font-family: Montserrat;
 	overflow-x: hidden;
 	color: $text;
 	background-color: #000;
@@ -34,6 +34,9 @@ body {
 		&:required:valid {
 			border-color: green;
 		}
+	}
+	&.scroll-hide{
+		overflow: hidden;
 	}
 }
 
@@ -155,18 +158,27 @@ h1{
 	letter-spacing: .01vw;
 	line-height: 1.2;
 	font-family: Montserrat;
+	@media only screen and (max-width: 640px) {
+		font-size: 7vw;
+	}
 }
 h2{
 	font-size: 2.2vw;
 	color: #fff;
 	line-height: 1.2;
 	font-family: Montserrat;
+	@media only screen and (max-width: 640px) {
+		font-size: 6vw;
+	}
 }
 h3{
 	color: #fff;
 	font-family: Montserrat;
 	font-size: 1.67vw;
 	font-weight: 500;
+	@media only screen and (max-width: 640px) {
+		font-size: 5vw;
+	}
 }
 p{
 	font-size: 1.4vw;
@@ -175,6 +187,9 @@ p{
 	letter-spacing: .07vw;
 	line-height: 1.6;
 	font-weight: 500;
+	@media only screen and (max-width: 640px) {
+		font-size: 4vw;
+	}
 
 }
 
@@ -184,7 +199,9 @@ a{
 	font-family: Montserrat;
 	font-weight: 500;
 	text-decoration: none !important;
-	
+	@media only screen and (max-width: 640px) {
+		font-size: 4vw;
+	}
 
 	&.txt-link{
 		display: inline-block;
@@ -240,7 +257,7 @@ header{
 	justify-content: space-between;
 	@include fadeAnimation;
 	.logo{
-		max-width:  100px;
+
 		color: #fff;
 		font-size: 1.7vw;
 		font-family: Russo One;
@@ -293,9 +310,15 @@ header{
 	background-repeat: no-repeat;
 	height: 100%;
 	position:fixed;
+	overflow: hidden;
+	@media only screen and (max-width: 640px) {
+		position: relative;
+		height: 70%;
+	}
 	top: 0;
 	z-index: 99;
 	width: 100%;
+
 	#canvas{
 		background:#777;
 		opacity: .4;
@@ -312,11 +335,11 @@ header{
 		width: 100%;
 		text-align: center;
 		h1{
-			line-height: 1;
+			line-height: 1.2;
 			font-family: Montserrat;
 			font-weight: 500;
 			@media only screen and (max-width: 640px) {
-				font-size: 12vw;
+				font-size: 7vw;
 			}
 		}
 		a{
@@ -326,32 +349,56 @@ header{
 	}
 	#left-hero-info{
 		position: absolute;
-		left: 1.4vw;
-		top: 50%;
-		transform: translateY(-50%) rotate(-90deg);
-		transform-origin: center;
-		z-index: 100000;
-		line-height: 1;
-		opacity: 0;
-		transition: opacity .5s ease-in;
+		p{
+			font-family: Montserrat;
+			font-weight: 500;
+		}
+		@media only screen and (min-width: 640px) {
+			left: 1.4vw;
+			top: 50%;
+			transform: translateY(-50%) rotate(-90deg);
+			transform-origin: center;
+			z-index: 100000;
+			line-height: 1;
+			opacity: 0;
+			transition: opacity .5s ease-in;
+		}
+		@media only screen and (max-width: 640px) {
+			left: 0 !important;
+			bottom: 10%;
+			width: 100%;
+			text-align: center;
+			a,p{
+				font-size: 5vw;
+			}
+		}
+
 
 		p{
 			margin: 0px;
 		}
-		a{
 
-		}
 	}
 	#right-hero-content{
 		position: absolute;
-		right: 1.4vw;
-		top: 50%;
-		transform: translateY(-50%) rotate(90deg);
-		transform-origin: center;
-		z-index: 100000;
-		opacity: 0;
-		transition: opacity .5s ease-in;
-
+		@media only screen and (min-width: 640px) {
+			right: 1.4vw;
+			top: 50%;
+			transform: translateY(-50%) rotate(90deg);
+			transform-origin: center;
+			z-index: 100000;
+			opacity: 0;
+			transition: opacity .5s ease-in;
+		}
+		@media only screen and (max-width: 640px) {
+			right: 0 !important;
+			bottom: 3%;
+			width: 100%;
+			text-align: center;
+			a{
+				font-size: 4vw;
+			}
+		}
 		a{
 			margin-right: 3vw;
 			line-height: 1;
@@ -375,6 +422,16 @@ header{
 main{
 	position: relative;
 	margin-top: 100vh;
+	@media only screen and (max-width: 640px) {
+		margin-top: 0;
+		// canvas{
+		// 	position: absolute;
+		// 	top: 0;
+		// 	bottom: 0;
+		// 	width: 100%;
+		// 	height: 100%;
+		// }
+	}
 	background-color: #000;
 	z-index: 100;
 	h2{
@@ -394,6 +451,10 @@ main{
 	bottom: .2vw;
 	color: #fff;
 	font-size: .7vw;
+	@media only screen and (max-width: 640px) {
+		display: none;
+	}
+
 	.scrolldownhoney{
 		border: 2px solid #FFFFFF;
 		border-radius: 30px;
@@ -418,11 +479,17 @@ main{
 
 }
 #about{
+	@media only screen and (max-width: 640px) {
+		padding-top: 10vw !important;
+	}
 	.section-inner{
 		//padding-top: 3vw;
 		h1{
 			font-weight: 700;
 			margin-bottom: 2rem;
+			@media only screen and (max-width: 640px) {
+				margin-bottom: 1rem;
+			}
 		}
 		.container{
 			.row{
@@ -433,6 +500,10 @@ main{
 			.wrap-card{
 				width: 75%;
 				@include aspectRatio(95%);
+				@media only screen and (max-width: 640px) {
+					margin-top: 5vw;
+					margin-bottom: 5vw;
+				}
 			}
 			p{
 				position: absolute;
@@ -448,6 +519,9 @@ main{
 
 #works{
 	padding: 3vw 0;
+	@media only screen and (max-width: 640px) {
+		padding: 10vw 0 10vw;
+	}
 	h2{
 		text-align: center;
 	}
@@ -588,15 +662,23 @@ main{
 	display: flex;
 	flex-wrap: wrap;
 	margin: 50px -15px 0px;
+	@media only screen and (max-width: 640px) {
+		margin: 30px -10px 0px;
+	}
 	.portfolio-item{
 		width: calc(33.333% - 30px);
+		
 		margin: 0px 15px 40px;
+		@media only screen and (max-width: 640px) {
+			width: calc(50% - 20px);
+			margin: 0px 10px 20px;
+		}
+
 		a{
 			display: block;
 		}
 		.img-wrapper{
-			@include aspectRatio(125%);
-			
+			@include aspectRatio(100%);
 			img{
 				opacity: 0;
 			}
@@ -631,12 +713,20 @@ main{
 			width: 98%;
 			background: #000;
 			transition: all .2s ease-in;
+			@media only screen and (max-width: 640px) {
+				left: 0%;
+				width: 100%;
+			}
 			h3,p, a{
 				color: #fff;
 				transition: all .2s ease-in;
 			}
 			.info-inner{
 				padding: 30px 20px 20px;
+				@media only screen and (max-width: 640px) {
+					padding: 10px 0px 0px;	
+				}
+
 			}
 
 		}
@@ -678,6 +768,9 @@ main{
 	.footer-container{
 		display: grid;
 		grid-template-columns: 26% 30% 38% 6%;
+		@media only screen and (max-width: 640px) {
+			grid-template-columns: 100%;
+		}
 		border: 1px solid #fff;
 		> div{
 			border: 1px solid #fff;
@@ -685,14 +778,37 @@ main{
 		.email-area{
 			display: flex;
 			align-items: center;
+			@media only screen and (max-width: 640px) {
+				background: #fff;
+			}
+			.to-top-button{
+				display: none;
+				@media only screen and (max-width: 640px) {
+					display: block;
+					background-color: #000;
+					border: 1px solid #fff;
+				}
+			}
 		}
 		.email-inner{
 			padding: 2vw calc(5vw + 15px);
+			@media only screen and (max-width: 640px) {
+				padding: 15px;
+				width: 80%;
+				background-color: #000;
+			}
+
 		}
 		.menu-area, .social-area,.top-but-area{
 			display: grid;
 			grid-template-rows: 1fr 1fr;
 
+		}
+		@media only screen and (max-width: 640px) {
+			.top-but-area{
+				display: none;
+
+			}
 		}
 		.menu-footer{
 			display: flex;
@@ -734,10 +850,16 @@ main{
 				p{
 					margin: 0px;
 				}
+				@media only screen and (max-width: 640px) {
+					padding: 25px;
+				}
 			}
 
 		}
 		.to-top-button{
+			@media only screen and (max-width: 640px) {
+				display: none;
+			}
 			img{
 				display: block;
 				width: 100%;
@@ -755,6 +877,107 @@ main{
 				object-fit: cover;
 
 			}
+		}
+	}
+
+}
+
+#header{
+	@media only screen and (max-width: 640px) {
+		display: none !important;
+	}
+}
+#mobile-header{
+	display: none;
+
+	@media only screen and (max-width: 640px) {
+		display: block;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		z-index: 100000000;
+		&.solid{
+			background-color: #000;
+		}
+		.logo{
+			width: 50%;
+			a{
+				font-size: 5vw;
+			}
+
+		}
+		.three{
+			width: 50%;
+		}
+		.col-md-12{
+			display: flex;
+		}
+	}
+	.hamburger .line{
+		width: 30px;
+		height: 2px;
+		background-color: #ecf0f1;
+		display: block;
+		margin: 6px 0 6px auto;
+
+		-webkit-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+	}
+
+
+	#hamburger-1.is-active .line:nth-child(2){
+		opacity: 0;
+	}
+
+	#hamburger-1.is-active .line:nth-child(1){
+		-webkit-transform: translateY(4px) rotate(45deg);
+		-ms-transform: translateY(4px) rotate(45deg);
+		-o-transform: translateY(4px) rotate(45deg);
+		transform: translateY(4px) rotate(45deg);
+	}
+
+	#hamburger-1.is-active .line:nth-child(3){
+		-webkit-transform: translateY(-13px) rotate(-45deg);
+		-ms-transform: translateY(-13px) rotate(-45deg);
+		-o-transform: translateY(-13px) rotate(-45deg);
+		transform: translateY(-13px) rotate(-45deg);
+	}
+
+}
+
+#mobile-navigation{
+	display: none;
+	@media only screen and (max-width: 640px) {
+		display: block;
+		display: flex;
+		position: fixed;
+		z-index: 10000000;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, .8);
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		opacity: 0;
+		z-index: 0;
+		transition: all .4s ease-in;
+		visibility: hidden;
+		ul{
+			padding: 0px;
+			li{
+
+				list-style: none;
+				
+				a{
+					font-size: 9vw;
+					font-weight: 700;
+				}
+			}
+		}
+		&.show{
+			opacity: 1;
+			z-index: 10000000;
+			visibility: visible;
 		}
 	}
 

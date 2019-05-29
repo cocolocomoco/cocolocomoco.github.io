@@ -29,27 +29,52 @@
 </head>
 
 <body>
-
-	<header id="header">
+	<nav id="mobile-navigation">
+		<ul>
+			<li><a data-scroll class="txt-link" href="#about">About</a></li>
+			<li><a data-scroll class="txt-link" href="#works">Works</a></li>
+			<li><a data-scroll class="txt-link" href="#services">Services</a></li>
+			<li><a data-scroll class="txt-link" href="#contact">Contact</a></li>
+		</ul>
+	</nav>
+	<header id="header" class="destop-menu">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
 					<div class="logo"><a href="/">humeniuk.dev</a></div>
 				</div>
 				<div class="col-md-8">
-					<menu id="main-nav">
+					<nav id="main-nav">
 						<ul>
 							<li><a data-scroll class="txt-link" href="#about">About</a></li>
 							<li><a data-scroll class="txt-link" href="#works">Works</a></li>
 							<li><a data-scroll class="txt-link" href="#services">Services</a></li>
 							<li><a data-scroll class="txt-link" href="#contact">Contact</a></li>
 						</ul>
-					</menu>
+					</nav>
 				</div>
 			</div>
 		</div>
-		
 	</header>
+
+	<header id="mobile-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="logo"><a href="/">humeniuk.dev</a></div>
+					<div class="three">
+						<div class="hamburger" id="hamburger-1">
+							<span class="line"></span>
+							<span class="line"></span>
+							<span class="line"></span>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
 	<section id="hero">
 		<canvas id="canvas"></canvas>
 		<div class="hero-content">
@@ -57,7 +82,7 @@
 		</div>
 
 		<div id="left-hero-info">
-			<p><a href="mailto:hello@humeniuk.dev" class="txt-link">Contact Me: hello@humeniuk.dev</a></p>
+			<p>Contact Me: <a href="mailto:hello@humeniuk.dev" class="txt-link">hello@humeniuk.dev</a></p>
 		</div>
 
 		<div id="right-hero-content">
@@ -116,7 +141,7 @@
 											<div class="info-inner">
 												<h3 class="project-name">Hello Lumio</h3>
 												<p class="project-desc">Customize a product with engraving ability.</p>
-												<div class="platform shpf"><p>/ Shopify + Squarespace</p></div>
+												<p class="platform shpf">/ Shopify + Squarespace</p>
 											</div>
 											
 										</div>
@@ -134,7 +159,7 @@
 											<div class="info-inner">
 												<h3 class="project-name">FMG Leading</h3>
 												<p class="project-desc">Totally custom template for Squarespace.</p>
-												<div class="platform sqs"><p>/ Squarespace</p></div>
+												<p class="platform sqs">/ Squarespace</p>
 											</div>
 										</div>
 
@@ -151,7 +176,7 @@
 											<div class="info-inner">
 												<h3 class="project-name">Ernest</h3>
 												<p class="project-desc">Totally custom template for Shopify. A monthly supply customizer.</p>
-												<div class="platform shpf">/ Shopify</div>
+												<p class="platform shpf">/ Shopify</p>
 											</div>
 											
 										</div>
@@ -170,7 +195,7 @@
 											<div class="info-inner">
 												<h3 class="project-name">Elliston Systems</h3>
 												<p class="project-desc">Totally custom template for Squarespace.</p>
-												<div class="platform sqs">/ Squarespace</div>
+												<p class="platform sqs">/ Squarespace</p>
 											</div>
 											
 										</div>
@@ -188,7 +213,7 @@
 											<div class="info-inner">
 												<h3 class="project-name">Jollyroad Productions</h3>
 												<p class="project-desc">Customize a product with engraving ability.</p>
-												<div class="platform sqs">/ Squarespace</div>
+												<p class="platform sqs">/ Squarespace</p>
 											</div>
 											
 										</div>
@@ -206,7 +231,7 @@
 											<div class="info-inner">
 												<h3 class="project-name">Peaches Skincare</h3>
 												<p class="project-desc">Totally custom e-commerce template for Squarespace.</p>
-												<div class="platform sqs">/ Squarespace</div>
+												<p class="platform sqs">/ Squarespace</p>
 											</div>
 
 										</div>
@@ -224,7 +249,7 @@
 											<div class="info-inner">
 												<h3 class="project-name">Tanks A Lot</h3>
 												<p class="project-desc">Totally custom template for Shopfiy e-commerce.</p>
-												<div class="platform shpf">/ Shopify</div>
+												<p class="platform shpf">/ Shopify</p>
 											</div>
 										</div>
 
@@ -241,7 +266,7 @@
 											<div class="info-inner">
 												<h3 class="project-name">Elm Social</h3>
 												<p class="project-desc">Totally custom template for Squarespace.</p>
-												<div class="platform sqs">/ Squarespace</div>
+												<p class="platform sqs">/ Squarespace</p>
 											</div>
 											
 										</div>
@@ -259,7 +284,7 @@
 											<div class="info-inner">
 												<h3 class="project-name">Redline Trading Solutions</h3>
 												<p class="project-desc">Totally custom template for Squarespace.</p>
-												<div class="platform sqs">/ Squarespace</div>
+												<p class="platform sqs">/ Squarespace</p>
 											</div>
 										</div>
 
@@ -276,7 +301,7 @@
 											<div class="info-inner">
 												<h3 class="project-name">Recycled Market</h3>
 												<p class="project-desc">E-commerce marketplace on Shopify. Project on pause.</p>
-												<div class="platform sqs">/ Shopify</div>
+												<p class="platform sqs">/ Shopify</p>
 											</div>
 										</div>
 									</a>
@@ -335,6 +360,11 @@
 				<div class="email-inner">
 					<h2>Contact Me</h2>
 					<a href="mailto:hello@humeniuk.dev" class="txt-link">hello@humeniuk.dev</a>
+				</div>
+				<div class="to-top-button">
+					<a href="#about">
+						<img src="img/imgs/top.svg" alt="">
+					</a>
 				</div>
 			</div>
 			<div class="menu-area">
