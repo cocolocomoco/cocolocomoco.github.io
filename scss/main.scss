@@ -264,7 +264,7 @@ header{
 		font-family: Russo One;
 		img{
 			display: block;
-			max-width: 100%;
+			max-width: 13vw;
 			width: 100%;
 		}
 		a{
@@ -936,7 +936,11 @@ main{
 }
 #mobile-header{
 	display: none;
-
+.logo{
+			img{
+				max-width: 33vw;
+			}
+		}
 	@media only screen and (max-width: 640px) {
 		display: block;
 		padding-top: 10px;
@@ -995,6 +999,7 @@ main{
 }
 
 #mobile-navigation{
+	
 	display: none;
 	background-color: transparent;
 
@@ -1013,6 +1018,7 @@ main{
 		z-index: 0;
 		transition: all .2s ease-in;
 		visibility: hidden;
+
 		ul{
 			padding: 0px;
 			li{
