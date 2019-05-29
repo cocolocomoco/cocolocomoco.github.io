@@ -81,23 +81,24 @@ function solidHeader(){
     function amountscrolled(){
 
         if(window.innerWidth > 640){
-         var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop
-         if (scrollTop > winheight) {
-             document.getElementById("header").className = 'solid';
-         }else{
-             document.getElementById("header").classList.remove('solid');
-         }
-     }else{
-       var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop
-
-       if (scrollTop > winheight/3) {
-           document.getElementById("mobile-header").className = 'solid';
+           var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop
+           if (scrollTop > winheight) {
+               document.getElementById("header").className = 'solid';
+           }else{
+               document.getElementById("header").classList.remove('solid');
+           }
        }else{
-         document.getElementById("mobile-header").classList.remove('solid');
+         var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop
 
-     }
+         if (scrollTop > winheight/3) {
+             document.getElementById("mobile-header").className = 'solid';
+         }else if (scrollTop === 0){
+           document.getElementById("mobile-header").classList.remove('solid');
+       }else{
+           document.getElementById("mobile-header").classList.remove('solid');
+       }
 
- }
+   }
 }
 window.addEventListener("scroll", function(){
     amountscrolled();
@@ -117,17 +118,16 @@ var mobItem = document.querySelectorAll('.mobile-nav-item')
 menu.onclick = function() {
     menu.classList.toggle('is-active');
     navMob.classList.toggle('show');
-    document.querySelector('body').classList.toggle('scroll-hide');
-    document.querySelector('html').classList.toggle('scroll-hide');
+    // document.querySelector('body').classList.toggle('scroll-hide');
+    // document.querySelector('html').classList.toggle('scroll-hide');
 };
 for (var i = 0; i < mobItem.length; i++) {
-      mobItem[i].onclick = function() {
-        alert('alina');
-        menu.classList.remove('is-active');
-        navMob.classList.remove('show');
-        document.querySelector('body').classList.remove('scroll-hide');
-        document.querySelector('html').classList.remove('scroll-hide');
-    }
+  mobItem[i].onclick = function() {
+    menu.classList.remove('is-active');
+    navMob.classList.remove('show');
+    // document.querySelector('body').classList.remove('scroll-hide');
+    // document.querySelector('html').classList.remove('scroll-hide');
+}
 }
 
 // function scrollTo(element) {

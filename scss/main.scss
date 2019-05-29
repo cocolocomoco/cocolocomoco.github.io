@@ -180,7 +180,7 @@ h3{
 		font-size: 5vw;
 	}
 }
-p{
+p, li{
 	font-size: 1.4vw;
 	color: #e9e9e9;
 	font-family: Hind;
@@ -305,7 +305,7 @@ header{
 	background:#777;
 	margin:0;
 	//background-image: url('https://images.unsplash.com/photo-1504672281656-e4981d70414b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80');
-	background-image: url('https://images.unsplash.com/photo-1515462277126-2dd0c162007a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1235&q=80');
+	background-image: url('/img/imgs/banner.jpeg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -314,7 +314,7 @@ header{
 	overflow: hidden;
 	@media only screen and (max-width: 640px) {
 		position: relative;
-		height: 80%;
+		height: 90%;
 	}
 	top: 0;
 	z-index: 99;
@@ -519,7 +519,7 @@ main{
 
 
 #works{
-	padding: 3vw 0;
+	padding: 7vw 0 3vw;
 	@media only screen and (max-width: 640px) {
 		padding: 10vw 0 10vw;
 	}
@@ -664,15 +664,15 @@ main{
 	flex-wrap: wrap;
 	margin: 50px -15px 0px;
 	@media only screen and (max-width: 640px) {
-		margin: 30px -10px 0px;
+		margin: 30px -5px 0px;
 	}
 	.portfolio-item{
 		width: calc(33.333% - 30px);
 		
 		margin: 0px 15px 40px;
 		@media only screen and (max-width: 640px) {
-			width: calc(50% - 20px);
-			margin: 0px 10px 20px;
+			width: calc(50% - 10px);
+			margin: 0px 5px 20px;
 		}
 
 		a{
@@ -756,9 +756,55 @@ main{
 	}
 }
 
+#philos{
+	padding: 5vw 0;
+	.philosoohy-grid{
+		margin: 5vw -15px 0px;
+		display: flex;
+		flex-wrap: wrap;
+		@media only screen and (max-width: 640px) {
+			margin: 50px 0px 0px;
+		}
+
+		.phil-item{
+			width: calc(33.333% - 30px);
+			border: 1px solid #e3e3e3;
+			overflow: hidden;
+			margin: 0px 15px 40px;
+			@media only screen and (max-width: 640px) {
+				width: 100%;
+				margin: 0px 0px 40px;
+			}
+			.count{
+				img{
+					max-height: 40vh;
+					@media only screen and (max-width: 800px) {
+						max-height: 20vh;
+					}
+					@media only screen and (max-width: 640px) {
+						max-height: 10vh;
+					}
+					height: 100%;
+				}
+				
+			}
+			h2{
+				padding: 20px;
+				@media only screen and (max-width: 640px) {
+					padding: 15px;
+				}
+				font-weight: 500;
+			}
+		}
+	}
+}
+
 
 #services{
-	padding-bottom: 5vw;
+	padding-bottom: 8vw;
+	h1{
+		margin-bottom: 2vw;
+	}
 }
 
 
@@ -959,13 +1005,13 @@ main{
 		z-index: 10000000;
 		width: 100%;
 		height: 100%;
-		background: rgba(0, 0, 0, .9);
+		background: rgba(0, 0, 0, .98);
 		align-items: center;
 		justify-content: center;
 		text-align: center;
 		opacity: 0;
 		z-index: 0;
-		transition: all .4s ease-in;
+		transition: all .2s ease-in;
 		visibility: hidden;
 		ul{
 			padding: 0px;
