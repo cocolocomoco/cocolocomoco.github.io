@@ -111,18 +111,25 @@ window.addEventListener("scroll", function(){
 
 var menu = document.querySelector('.hamburger');
 var navMob = document.querySelector('#mobile-navigation');
+var mobItem = document.querySelectorAll('.mobile-nav-item')
+
+
 menu.onclick = function() {
     menu.classList.toggle('is-active');
     navMob.classList.toggle('show');
     document.querySelector('body').classList.toggle('scroll-hide');
     document.querySelector('html').classList.toggle('scroll-hide');
 };
-document.querySelector('#mobile-navigation a').onclick = function() {
-    menu.classList.toggle('is-active');
-    navMob.classList.toggle('show');
-    document.querySelector('body').classList.toggle('scroll-hide');
-    document.querySelector('html').classList.toggle('scroll-hide');
-};
+for (var i = 0; i < mobItem.length; i++) {
+      mobItem[i].onclick = function() {
+        alert('alina');
+        menu.classList.remove('is-active');
+        navMob.classList.remove('show');
+        document.querySelector('body').classList.remove('scroll-hide');
+        document.querySelector('html').classList.remove('scroll-hide');
+    }
+}
+
 // function scrollTo(element) {
 //   window.scroll({
 //     behavior: 'smooth',
