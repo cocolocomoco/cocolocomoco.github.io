@@ -90,7 +90,7 @@ function solidHeader(){
        }else{
          var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop
 
-         if (scrollTop > winheight/1.43) {
+         if (scrollTop > winheight/1.25) {
              document.getElementById("mobile-header").className = 'solid';
          }else{
            document.getElementById("mobile-header").classList.remove('solid');
@@ -129,8 +129,7 @@ solidHeader();
 
 
 addEvent(window, "resize", function(event) {
-    document.getElementById("right-hero-content").style.opacity = 0;
-    document.getElementById("left-hero-info").style.opacity = 0;
+
     setTimeout(function(){ //call when transitions end
       setLeftPos();
       setRightPos();

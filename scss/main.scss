@@ -313,7 +313,7 @@ header{
 	overflow: hidden;
 	@media only screen and (max-width: 640px) {
 		position: relative;
-		height: 70%;
+		height: 80%;
 	}
 	top: 0;
 	z-index: 99;
@@ -365,11 +365,11 @@ header{
 		}
 		@media only screen and (max-width: 640px) {
 			left: 0 !important;
-			bottom: 10%;
+			bottom: 7%;
 			width: 100%;
 			text-align: center;
 			a,p{
-				font-size: 5vw;
+				font-size: 4vw;
 			}
 		}
 
@@ -392,11 +392,11 @@ header{
 		}
 		@media only screen and (max-width: 640px) {
 			right: 0 !important;
-			bottom: 3%;
+			bottom: 2%;
 			width: 100%;
 			text-align: center;
 			a{
-				font-size: 4vw;
+				font-size: 3vw;
 			}
 		}
 		a{
