@@ -81,23 +81,23 @@ function solidHeader(){
     function amountscrolled(){
 
         if(window.innerWidth > 640){
-           var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop
-           if (scrollTop > winheight) {
-               document.getElementById("header").className = 'solid';
-           }else{
-               document.getElementById("header").classList.remove('solid');
-           }
-       }else{
          var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop
-
-         if (scrollTop > winheight/1.25) {
-             document.getElementById("mobile-header").className = 'solid';
+         if (scrollTop > winheight) {
+             document.getElementById("header").className = 'solid';
          }else{
-           document.getElementById("mobile-header").classList.remove('solid');
+             document.getElementById("header").classList.remove('solid');
+         }
+     }else{
+       var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop
 
-       }
+       if (scrollTop > winheight/3) {
+           document.getElementById("mobile-header").className = 'solid';
+       }else{
+         document.getElementById("mobile-header").classList.remove('solid');
 
-   }
+     }
+
+ }
 }
 window.addEventListener("scroll", function(){
     amountscrolled();
@@ -115,7 +115,32 @@ menu.onclick = function() {
     menu.classList.toggle('is-active');
     navMob.classList.toggle('show');
     document.querySelector('body').classList.toggle('scroll-hide');
+    document.querySelector('html').classList.toggle('scroll-hide');
 };
+document.querySelector('#mobile-navigation a').onclick = function() {
+    menu.classList.toggle('is-active');
+    navMob.classList.toggle('show');
+    document.querySelector('body').classList.toggle('scroll-hide');
+    document.querySelector('html').classList.toggle('scroll-hide');
+};
+// function scrollTo(element) {
+//   window.scroll({
+//     behavior: 'smooth',
+//     left: 0,
+//     top: element.offsetTop
+//   });
+// }
+
+// document.getElementById("contact-button").addEventListener('click', () => {
+//   scrollTo(document.getElementById("contact"));
+// });
+// document.getElementById("services-button").addEventListener('click', () => {
+//   scrollTo(document.getElementById("services"));
+// });
+// document.getElementById("about-button").addEventListener('click', () => {
+//   scrollTo(document.getElementById("about"));
+// });
+
 
 
 setLeftPos();
