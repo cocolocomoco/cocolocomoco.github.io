@@ -1,40 +1,40 @@
-// var canvas = document.getElementById('canvas'),
-// ctx = canvas.getContext('2d');
+var canvas = document.getElementById('canvas'),
+ctx = canvas.getContext('2d');
 
-// function resize() {
-//     canvas.width = window.innerWidth;
-//     canvas.height = window.innerHeight;
-// }
-// resize();
-// window.onresize = resize;
+function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+resize();
+window.onresize = resize;
 
-// function noise(ctx) {
+function noise(ctx) {
 
-//     var w = ctx.canvas.width,
-//     h = ctx.canvas.height,
-//     idata = ctx.createImageData(w, h),
-//     buffer32 = new Uint32Array(idata.data.buffer),
-//     len = buffer32.length,
-//     i = 0;
+    var w = ctx.canvas.width,
+    h = ctx.canvas.height,
+    idata = ctx.createImageData(w, h),
+    buffer32 = new Uint32Array(idata.data.buffer),
+    len = buffer32.length,
+    i = 0;
 
-//     for(; i < len;)
-//         buffer32[i++] = ((255 * Math.random())|0) << 24;
+    for(; i < len;)
+        buffer32[i++] = ((255 * Math.random())|0) << 24;
 
-//     ctx.putImageData(idata, 0, 0);
-// }
+    ctx.putImageData(idata, 0, 0);
+}
 
-// var toggle = true;
+var toggle = true;
 
-// // added toggle to get 30 FPS instead of 60 FPS
-// (function loop() {
-//     toggle = !toggle;
-//     if (toggle) {
-//         requestAnimationFrame(loop);
-//         return;
-//     }
-//     noise(ctx);
-//     requestAnimationFrame(loop);
-// })();
+// added toggle to get 30 FPS instead of 60 FPS
+(function loop() {
+    toggle = !toggle;
+    if (toggle) {
+        requestAnimationFrame(loop);
+        return;
+    }
+    noise(ctx);
+    requestAnimationFrame(loop);
+})();
 
 
 var addEvent = function(object, type, callback) {
@@ -118,35 +118,17 @@ var mobItem = document.querySelectorAll('.mobile-nav-item')
 menu.onclick = function() {
     menu.classList.toggle('is-active');
     navMob.classList.toggle('show');
-    // document.querySelector('body').classList.toggle('scroll-hide');
-    // document.querySelector('html').classList.toggle('scroll-hide');
+
 };
 for (var i = 0; i < mobItem.length; i++) {
   mobItem[i].onclick = function() {
     menu.classList.remove('is-active');
     navMob.classList.remove('show');
-    // document.querySelector('body').classList.remove('scroll-hide');
-    // document.querySelector('html').classList.remove('scroll-hide');
+
 }
 }
 
-// function scrollTo(element) {
-//   window.scroll({
-//     behavior: 'smooth',
-//     left: 0,
-//     top: element.offsetTop
-//   });
-// }
 
-// document.getElementById("contact-button").addEventListener('click', () => {
-//   scrollTo(document.getElementById("contact"));
-// });
-// document.getElementById("services-button").addEventListener('click', () => {
-//   scrollTo(document.getElementById("services"));
-// });
-// document.getElementById("about-button").addEventListener('click', () => {
-//   scrollTo(document.getElementById("about"));
-// });
 
 
 

@@ -61,8 +61,7 @@ b, strong {
 
 @import "media"; // Always at the end
 
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('https://fonts.googleapis.com/css?family=Baloo+Bhai|Russo+One&display=swap');;
+
 // @keyframes fadein {
 //   from { opacity: 0; }
 //   to   { opacity: 1; }
@@ -305,7 +304,6 @@ header{
 #hero {
 	background:#777;
 	margin:0;
-	//background-image: url('https://images.unsplash.com/photo-1504672281656-e4981d70414b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80');
 	background-image: url('/img/imgs/banner.jpeg');
 	background-size: cover;
 	background-position: center;
@@ -641,7 +639,7 @@ main{
 			@include projectColors(#F6DACF, 50%, '/img/logos/lumio.png');
 		}
 		&.fmg{
-			@include projectColors(#3d4e49, 95%, '/img/logos/fmg.png');
+			@include projectColors(#6d7e67, 90%, '/img/logos/fmg.png');
 		}
 		&.ernest{
 			@include projectColors(#fd9786, 60%, '/img/logos/ernest.png');
