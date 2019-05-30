@@ -133,13 +133,14 @@ b, strong {
 }
 
 
-@mixin projectColor($hex){
-	.project-name{
-		color: $hex;
-	}
-	.project-info{
-		&:before{
-			border-color:$hex;
+@mixin projectColors($hex, $widthLogo, $imgUrl){
+	.img-wrapper{
+		.project-logo{
+			background-size: $widthLogo;
+			background-image: url($imgUrl);
+		}
+		.img-overlay{
+			background-color: $hex;
 		}
 	}
 }
@@ -309,7 +310,7 @@ header{
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	height: 100%;
+	height: 100vh;
 	position:fixed;
 	overflow: hidden;
 	@media only screen and (max-width: 640px) {
@@ -529,134 +530,6 @@ main{
 }
 
 
-// .portfolio-grid{
-// 	display: flex;
-// 	flex-wrap: wrap;
-// 	.portfolio-item{
-// 		width: 33.333%;
-// 		position: relative;
-// 		.img-wrapper{
-// 			padding-bottom:75%;
-// 			position: relative;
-// 			margin: 0vw 2vw;
-// 			img{
-// 				display: block;
-// 				max-width: 100%;
-// 				width: 100%;
-// 				position: absolute;
-// 				top: 0;
-// 				right: 0;
-// 				left: 0px;
-// 				height: 100%;
-// 				object-fit: contain;
-// 			}
-// 		}
-// 		.project-info{
-// 			position: absolute;
-// 			cursor: pointer;
-// 			top: 0;
-// 			left: 0;
-// 			right: 0;
-// 			bottom: 0;
-// 			width: 100%;
-// 			height: 100%;
-// 			background-color: rgba(0,0,0, .95);
-// 			text-align: center;
-// 			display: flex;
-// 			align-items: center;
-// 			opacity: 0;
-// 			transition: opacity .3s ease-in;
-// 			&:before{
-// 				// position: absolute;
-// 				// content: '';
-// 				// left: 50%;
-// 				// transform: translateX(-50%);
-// 				// width: 95%;
-// 				// height: 95%;
-// 				// border: 3px solid;
-// 				// border-color: #fc4c02;
-// 			}
-// 			.project-name{
-// 				color: orange;
-// 				font-size: 3vw;
-// 				line-height: 1;
-// 				//margin: 0px;
-// 			}
-// 			.project-desc{
-// 				font-size: 1.6vw;
-// 				line-height: 1.2;
-
-// 			}
-// 			.info-inner{
-// 				width: 80%;
-// 				margin: 0 auto;
-
-
-// 			}
-// 			&:hover{
-// 				opacity: 1;
-// 			}
-// 		}
-// 		.platform{
-// 			position: absolute;
-// 			right: 20px;
-// 			bottom: 20px;
-// 			height: 1vw;
-// 			width: 1vw;
-// 			background-size: contain;
-// 			background-repeat: no-repeat;
-// 			background-position: center;
-// 			&.sqs{
-// 				background-image: url('https://static1.squarespace.com/static/5cb42c078dfc8c32928f1683/t/5ce91a819140b749b6ad03fb/1558780547201/squarespace-logo-white.png');
-// 				width: 5vw;
-// 				height: 5vw;
-// 			}
-// 			&.shpf{
-// 				background-image: url('https://d2z6c3c3r6k4bx.cloudfront.net/uploads/account/logo/1007314/display_41c7844bc61708da4cd7e0ba15c14957.png');
-// 				width: 7vw;
-// 				height: 5vw;
-// 			}
-// 		}
-// 		&.lumio{
-// 			@include projectColor(#fc4c02);
-// 		}
-// 		&.fmg{
-// 			@include projectColor(#3d4e49);
-// 		}
-// 		&.ernest{
-// 			@include projectColor(#215aa8);
-// 		}
-// 		&.elliston{
-// 			@include projectColor(#ffda01);
-// 		}
-// 		&.jolly{
-// 			@include projectColor(#91bbe3);
-// 		}
-// 		&.qfs{
-// 			@include projectColor(#3f606f);
-// 		}
-// 		&.peach{
-// 			@include projectColor(#ea8788);
-// 		}
-// 		&.tal{
-// 			@include projectColor(#203B87);
-// 		}
-// 		&.fkk{
-// 			@include projectColor(#fff);
-// 		}
-// 		&.elm{
-// 			@include projectColor(#fff);
-// 		}
-// 		&.redline{
-// 			@include projectColor(#e1523c);
-// 		}
-// 		&.recycle{
-// 			@include projectColor(#fff);
-// 		}
-// 	}
-// }
-
-
 
 
 .portfolio-grid{
@@ -668,7 +541,6 @@ main{
 	}
 	.portfolio-item{
 		width: calc(33.333% - 30px);
-		
 		margin: 0px 15px 40px;
 		@media only screen and (max-width: 640px) {
 			width: calc(50% - 10px);
@@ -680,8 +552,19 @@ main{
 		}
 		.img-wrapper{
 			@include aspectRatio(100%);
-			img{
-				opacity: 0;
+			// img{
+			// 	//opacity: 0;
+			// 	z-index: 10001;
+			// }
+			.project-logo{
+				width: 100%;
+
+				background-size: 50%;
+				background-position: center;
+				position: absolute;
+				height: 100%;
+				z-index: 10001;
+				background-repeat: no-repeat;
 			}
 			.img-overlay{
 				position: absolute;
@@ -693,6 +576,7 @@ main{
 				height: 100%;
 				background-color: #05E3EE;
 				z-index: 10000;
+				box-shadow: 5px 6px 8px rgba(0, 0, 0, .2);
 			}
 			.img-hover{
 				position: absolute;
@@ -751,6 +635,43 @@ main{
 			text-transform: uppercase;
 			color: #fff;
 			transition: all .3s ease-in;
+		}
+
+		&.lumio{
+			@include projectColors(#F6DACF, 50%, '/img/logos/lumio.png');
+		}
+		&.fmg{
+			@include projectColors(#3d4e49, 95%, '/img/logos/fmg.png');
+		}
+		&.ernest{
+			@include projectColors(#fd9786, 60%, '/img/logos/ernest.png');
+		}
+		&.elliston{
+			@include projectColors(#2e303b, 80%, '/img/logos/elliston.png');
+		}
+		&.jolly{
+			@include projectColors(#91bbe3, 80%, '/img/logos/jolly.png');
+		}
+		&.ros{
+			@include projectColors(#091e3f, 60%, '/img/logos/roswell.png');
+		}
+		&.lr{
+			@include projectColors(#d0670b, 70%, '/img/logos/lr.png');
+		}
+		&.peach{
+			@include projectColors(#fff, 60%, '/img/logos/peaches.png');
+		}
+		&.tal{
+			@include projectColors(#203b87, 70%, '/img/logos/tanks.png');
+		}
+		&.elm{
+			@include projectColors(#222, 50%, '/img/logos/elm.png');
+		}
+		&.redline{
+			@include projectColors(#e1523c, 70%, '/img/logos/redline-logo-white.svg');
+		}
+		&.recycle{
+			@include projectColors(#fff, 70%, '/img/logos/recycled.png');
 		}
 
 	}
@@ -936,11 +857,11 @@ main{
 }
 #mobile-header{
 	display: none;
-.logo{
-			img{
-				max-width: 33vw;
-			}
+	.logo{
+		img{
+			max-width: 33vw;
 		}
+	}
 	@media only screen and (max-width: 640px) {
 		display: block;
 		padding-top: 10px;
@@ -999,7 +920,7 @@ main{
 }
 
 #mobile-navigation{
-	
+
 	display: none;
 	background-color: transparent;
 
