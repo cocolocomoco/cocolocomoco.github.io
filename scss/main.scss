@@ -639,10 +639,13 @@ main{
 			@include projectColors(#F6DACF, 50%, '/img/logos/lumio.png');
 		}
 		&.fmg{
-			@include projectColors(#6d7e67, 90%, '/img/logos/fmg.png');
+			@include projectColors(#515e65, 90%, '/img/logos/fmg.png');
 		}
 		&.ernest{
 			@include projectColors(#fd9786, 60%, '/img/logos/ernest.png');
+		}
+		&.vic{
+			@include projectColors(#f01532, 70%, '/img/logos/vic.png');
 		}
 		&.elliston{
 			@include projectColors(#2e303b, 80%, '/img/logos/elliston.png');
@@ -654,7 +657,7 @@ main{
 			@include projectColors(#091e3f, 60%, '/img/logos/roswell.png');
 		}
 		&.lr{
-			@include projectColors(#d0670b, 70%, '/img/logos/lr.png');
+			@include projectColors(rgb(35, 30, 26), 70%, '/img/logos/lr.png');
 		}
 		&.peach{
 			@include projectColors(#fff, 60%, '/img/logos/peaches.png');

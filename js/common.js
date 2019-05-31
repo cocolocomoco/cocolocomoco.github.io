@@ -112,7 +112,7 @@ window.addEventListener("scroll", function(){
 
 var menu = document.querySelector('.hamburger');
 var navMob = document.querySelector('#mobile-navigation');
-var mobItem = document.querySelectorAll('.mobile-nav-item')
+var mobItem = document.querySelectorAll('.mobile-nav-item');
 
 
 menu.onclick = function() {
