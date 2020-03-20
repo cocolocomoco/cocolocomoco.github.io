@@ -17,7 +17,7 @@
 }
 #tysa img{
 	display: block;
-	width: 100%;
+	/*width: 100%;*/
 	object-fit: contain;
 	height: 100vh; 
 	object-position: center;
