@@ -4,14 +4,14 @@
 	background-image:url('/img/imgs/fon.png');
 	background-size: contain;
 }
-[src="/img/imgs/Corona-mob.png"]{
+#tysa [src="/img/imgs/Corona-mob.png"]{
 	display: none;
 }
 @media only screen and (orientation : portrait){
-	[src="/img/imgs/Corona-mob.png"]{
+	#tysa [src="/img/imgs/Corona-mob.png"]{
 		display: block;
 	}
-	[src="/img/imgs/Corona-desc.png"]{
+	#tysa [src="/img/imgs/Corona-desc.png"]{
 		display: none;
 	}
 }
