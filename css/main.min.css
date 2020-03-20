@@ -123,6 +123,7 @@ body {
 }
 .virus-4 {
   animation: float2 180s linear infinite;
+    width: 72px;
 }
 .virus-5 {
   animation: float2 120s linear infinite;
@@ -133,6 +134,7 @@ body {
 .virus-6 {
   animation: float4 120s linear infinite;
   top: 50%;
+    width: 30px;
 }
 .virus-7 {
   animation: float5 100s linear infinite;
@@ -148,6 +150,7 @@ body {
   bottom: 0;
   top: auto;
   right: 22%;
+    width: 52px;
 }
 .virus-10 {
   animation: float6 120s linear infinite;
@@ -162,6 +165,7 @@ body {
 .virus-11 {
   animation: float1 100s linear infinite;
   top: 13%;
+    width: 100px;
   right: 2%;
 }
 .virus-11 {
@@ -182,6 +186,7 @@ body {
 .virus-13 {
   animation: float2 130s linear infinite;
   top: 44%;
+    width: 44px;
   right: 44%;
 }
 .virus-14 {
@@ -195,6 +200,7 @@ body {
   top: auto;
   left: 4%;
   bottom: 10%;
+    width: 66px;
 }
 .virus-15 {
   animation: float1 110s linear infinite;
@@ -206,6 +212,7 @@ body {
   animation: float2 100s linear infinite;
   top: auto;
   left: -5%;
+    width: 30px;
   bottom: 5%;
 }
 .virus-16 {
@@ -213,6 +220,7 @@ body {
   top: auto;
   left: 50%;
   bottom: 25%;
+    width: 80px;
 }
 .virus-16 {
   animation: float5 120s linear infinite;
@@ -225,6 +233,7 @@ body {
   top: auto;
   right: 0%;
   bottom: 0%;
+    width: 40px;
 }
 .virus-18 {
   animation: float3 200s linear infinite;
@@ -243,4 +252,5 @@ body {
   top: auto;
   right: 0%;
   bottom: 22%;
+  width: 60px;
 }
