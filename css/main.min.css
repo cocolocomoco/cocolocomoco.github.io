@@ -265,7 +265,18 @@ body {
   top: auto;
   opacity: 1;
 }
+#prus{
+height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
 #prus img{
-  display:block;
+   display: block;
   width: 100%;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  height: 100vw;
+  object-fit: cover;
+  
   }
