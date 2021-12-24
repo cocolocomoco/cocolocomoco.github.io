@@ -263,4 +263,9 @@ body {
   text-align: center;
   transform: translate(0);
   top: auto;
-  opacity: 1;}
+  opacity: 1;
+}
+#prus img{
+  display:block;
+  width: 100%;
+  }
