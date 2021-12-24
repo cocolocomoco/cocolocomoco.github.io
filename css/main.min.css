@@ -254,3 +254,13 @@ body {
   bottom: 22%;
   width: 60px;
 }
+
+
+#hero #left-hero-info{  
+  left: 0!important;
+  bottom: 7%;
+  width: 100%;
+  text-align: center;
+  transform: translate(0);
+  top: auto;
+  opacity: 1;}
